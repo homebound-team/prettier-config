@@ -1,6 +1,6 @@
 {
   "name": "@homebound/prettier-config",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Shared Prettier configuration for Homebound projects",
   "main": "./index.js",
   "files": [
