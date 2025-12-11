@@ -1,0 +1,30 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@7.2.1
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - publish:
+          context:
+            - npm-publish
+            - github
+          filters:
+            branches:
+              only:
+                - main
+
+jobs:
+  publish:
+    docker:
+      - image: cimg/node:24.12.0
+    steps:
+      - checkout
+      - run:
+          name: Login in NPM
+          command: 'echo "npmAuthToken: $NPM_TOKEN" >> ${HOME}/.yarnrc.yml'
+      - node/install-packages:
+          pkg-manager: yarn-berry
+      - run: yarn semantic-release

@@ -21,7 +21,10 @@
     "prettier-plugin-organize-imports": "^4.3.0"
   },
   "devDependencies": {
-    "prettier": "^3.7.4"
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "prettier": "^3.7.4",
+    "semantic-release": "^25.0.2"
   },
   "packageManager": "yarn@4.12.0"
 }
