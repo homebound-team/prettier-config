@@ -1,0 +1,30 @@
+{
+  "name": "@homebound/prettier-config",
+  "version": "0.0.0-development",
+  "description": "Shared Prettier configuration for Homebound projects",
+  "main": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/homebound-team/prettier-config.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  },
+  "dependencies": {
+    "prettier-plugin-organize-imports": "^4.3.0"
+  },
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "prettier": "^3.7.4",
+    "semantic-release": "^25.0.2"
+  },
+  "packageManager": "yarn@4.12.0"
+}
