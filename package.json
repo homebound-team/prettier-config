@@ -2,8 +2,6 @@
   "name": "@homebound/prettier-config",
   "version": "1.0.0",
   "description": "Shared Prettier configuration for Homebound projects",
-  "type": "module",
-  "exports": "./index.js",
   "main": "./index.js",
   "files": [
     "index.js"

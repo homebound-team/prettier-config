@@ -23,9 +23,9 @@ Add to your `package.json`:
 To override settings, create a `.prettierrc.js` file:
 
 ```js
-import homeboundConfig from "@homebound/prettier-config";
+const homeboundConfig = require("@homebound/prettier-config");
 
-export default {
+module.exports = {
   ...homeboundConfig,
   // your overrides here
 };
