@@ -22,5 +22,8 @@
   "dependencies": {
     "prettier-plugin-organize-imports": "^4.3.0"
   },
+  "devDependencies": {
+    "prettier": "^3.7.4"
+  },
   "packageManager": "yarn@4.12.0"
 }
