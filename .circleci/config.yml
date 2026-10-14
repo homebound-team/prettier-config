@@ -9,7 +9,6 @@ workflows:
     jobs:
       - publish:
           context:
-            - npm-publish
             - github
           filters:
             branches:
@@ -22,9 +21,11 @@ jobs:
       - image: cimg/node:24.12.0
     steps:
       - checkout
-      - run:
-          name: Login in NPM
-          command: 'echo "npmAuthToken: $NPM_TOKEN" >> ${HOME}/.yarnrc.yml'
       - node/install-packages:
           pkg-manager: yarn-berry
-      - run: yarn semantic-release
+      - run:
+          name: Release
+          # Publishes via npm trusted publishing (OIDC), so no NPM_TOKEN is needed.
+          command: |
+            export NPM_ID_TOKEN=$(circleci run oidc get --claims '{"aud":"npm:registry.npmjs.org"}')
+            yarn semantic-release
